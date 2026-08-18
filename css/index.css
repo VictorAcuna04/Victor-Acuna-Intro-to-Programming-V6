@@ -72,6 +72,21 @@ h2 {
   color: #ffd400;
 }
 
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+#skills li {
+  background-color: #262626;
+  border: 2px solid #ffd400;
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+
 #connect ul {
   display: flex;
   gap: 20px;
