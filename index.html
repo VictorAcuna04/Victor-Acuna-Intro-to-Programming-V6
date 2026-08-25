@@ -7,38 +7,112 @@
   <title>Victor Acuna's Portfolio</title>
   <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
+
   <nav>
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#connect">Connect</a>
+    <a href="#leave-a-message">Leave a Message</a>
   </nav>
+
   <h1>Victor Acuna</h1>
 
   <section id="about">
     <h2>About</h2>
     <p>
-      I'm a UCLA student studying engineering, currently learning web development through Code the Dream.
+      I'm a UCLA student studying engineering, currently learning web development
+      through Code the Dream.
     </p>
   </section>
 
   <section id="experience">
     <h2>Experience</h2>
+
     <ul>
       <li>
         <div class="job-header">
-          <span>Line-Following Robot Project - ECE3, UCLA</span>
-          <span>2025</span>
+          <span>Frontend Developer - Ice In My Area</span>
+          <span>Dec 2025 - Present</span>
         </div>
-        <p>Designed and built a PID-controlled line-following car on the TI-RSLK MAX platform.</p>
+        <p>
+          Built a responsive frontend using Next.js and Tailwind CSS for a
+          community-powered ICE activity tracker. Developed an interactive
+          live map using React Leaflet and OpenStreetMap, and implemented
+          English/Spanish multilingual support with privacy-focused features.
+        </p>
+      </li>
+
+      <li>
+        <div class="job-header">
+          <span>Webmaster - MADE at UCLA</span>
+          <span>Aug 2024 - Dec 2025</span>
+        </div>
+        <p>
+          Managed and updated the organization's WordPress website using HTML,
+          improving functionality, design, and user experience while
+          collaborating with the team to showcase projects and initiatives.
+        </p>
+      </li>
+
+      <li>
+        <div class="job-header">
+          <span>Full-Stack Developer - FitChck</span>
+          <span>Jan 2025 - Mar 2025</span>
+        </div>
+        <p>
+          Built a responsive fashion web application using React and Node.js
+          that recommends outfits based on weather and user preferences.
+          Integrated a weather API, user login functionality, and a
+          Figma-designed user interface.
+        </p>
+      </li>
+
+      <li>
+        <div class="job-header">
+          <span>Game Developer - Gail Lewis: Retail Avenger</span>
+          <span>Jan 2024 - Mar 2024</span>
+        </div>
+        <p>
+          Developed a top-down 2D Unity game using C#. Led character and level
+          design, programmed player movement and shooting mechanics, and
+          collaborated through GitHub for version control.
+        </p>
+      </li>
+
+      <li>
+        <div class="job-header">
+          <span>Founder and Instructor - United We Code</span>
+          <span>Aug 2018 - Present</span>
+        </div>
+        <p>
+          Founded a nonprofit initiative that teaches Scratch programming to
+          elementary school students. Coordinate programming instruction in
+          both English and Spanish.
+        </p>
+      </li>
+
+      <li>
+        <div class="job-header">
+          <span>UI/UX Intern - DevX, UCLA</span>
+          <span>Jan 2023 - May 2023</span>
+        </div>
+        <p>
+          Designed websites and mobile applications in Figma to address
+          challenges within the UCLA community. Developed a coffee shop app
+          featuring customizable orders, pickup scheduling, and payment
+          functionality.
+        </p>
       </li>
     </ul>
   </section>
 
   <section id="skills">
     <h2>Skills</h2>
+    <ul></ul>
   </section>
 
   <section id="projects">
@@ -49,9 +123,37 @@
   <section id="connect">
     <h2>Connect</h2>
     <ul>
-      <li><a href="https://github.com/VictorAcuna04">GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/victor-acuna/">LinkedIn</a></li>
+      <li>
+        <a href="https://github.com/VictorAcuna04">GitHub</a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/victor-acuna/">LinkedIn</a>
+      </li>
     </ul>
   </section>
+
+  <section id="leave-a-message">
+    <h2>Leave a Message</h2>
+    <form name="leave_message">
+      <label for="usersName">Name</label>
+      <input type="text" name="usersName" id="usersName" required><br>
+
+      <label for="usersEmail">Email</label>
+      <input type="email" name="usersEmail" id="usersEmail" required><br>
+
+      <label for="usersMessage">Message</label>
+      <textarea name="usersMessage" id="usersMessage" required></textarea><br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section id="messages">
+    <h2>Messages</h2>
+    <ul></ul>
+  </section>
+
+  <script src="js/index.js"></script>
+
 </body>
 </html>
