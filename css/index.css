@@ -103,3 +103,93 @@ h2 {
 #connect a:hover {
   color: #ffd400;
 }
+
+#leave-a-message form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+}
+
+#leave-a-message label {
+  font-weight: bold;
+  color: #f2f2f2;
+}
+
+#leave-a-message input,
+#leave-a-message textarea {
+  background-color: #262626;
+  color: #f2f2f2;
+  border: 2px solid #ffd400;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+#leave-a-message textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+#leave-a-message button {
+  align-self: flex-start;
+  background-color: #ffd400;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#leave-a-message button:hover {
+  background-color: #4b2e83;
+  color: #f2f2f2;
+}
+
+#messages ul {
+  list-style: none;
+  padding: 0;
+}
+
+#messages li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #262626;
+  border-left: 4px solid #ffd400;
+  border-radius: 8px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+}
+
+#messages li a {
+  color: #ffd400;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#messages li button {
+  margin-left: auto;
+  background-color: #4b2e83;
+  color: #f2f2f2;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+#messages li button:hover {
+  background-color: #ffd400;
+  color: #1a1a1a;
+}
+
+@media (max-width: 600px) {
+  #leave-a-message input,
+  #leave-a-message textarea,
+  #leave-a-message button {
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+}
