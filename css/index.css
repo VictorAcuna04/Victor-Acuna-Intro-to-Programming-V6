@@ -1,7 +1,7 @@
 body {
   background-color: #1a1a1a;
   color: #f2f2f2;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -83,6 +83,21 @@ h2 {
 #skills li {
   background-color: #262626;
   border: 2px solid #ffd400;
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+
+#projects ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+#projects li {
+  background-color: #262626;
+  border: 2px solid #4b2e83;
   border-radius: 8px;
   padding: 10px 15px;
 }

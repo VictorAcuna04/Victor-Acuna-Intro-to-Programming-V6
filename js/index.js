@@ -28,7 +28,7 @@ let skills = [
   "WordPress",
   "Arduino",
   "Git",
-  "GitHub"
+  "GitHub",
 ];
 
 let skillsSection = document.querySelector("#skills");
@@ -74,3 +74,29 @@ messageForm.addEventListener("submit", function (event) {
 
   messageForm.reset();
 });
+
+let repositories;
+
+fetch("https://api.github.com/users/VictorAcuna04/repos")
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    repositories = data;
+
+    console.log(repositories);
+
+    let projectSection = document.querySelector("#projects");
+    let projectList = projectSection.querySelector("ul");
+
+    for (let i = 0; i < repositories.length; i++) {
+      let project = document.createElement("li");
+
+      project.innerText = repositories[i].name;
+
+      projectList.appendChild(project);
+    }
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
