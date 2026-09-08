@@ -1,6 +1,23 @@
+:root {
+  --background-deep: #100b1d;
+  --background-purple: #2a1747;
+  --surface: rgba(38, 25, 61, 0.9);
+  --surface-dark: rgba(22, 14, 36, 0.94);
+  --heading-light: #e8ddff;
+  --heading-purple: #9e70e9;
+  --text: #d1cbd9;
+  --muted-text: #aaa2b5;
+  --border: #694b91;
+}
+
 body {
-  background-color: #1a1a1a;
-  color: #f2f2f2;
+  background: linear-gradient(
+    135deg,
+    var(--background-deep),
+    var(--background-purple)
+  );
+  background-attachment: fixed;
+  color: var(--text);
   font-family: "Segoe UI", Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -8,20 +25,21 @@ body {
 
 nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   padding: 15px 30px;
-  background-color: #0d0d0d;
-  border-bottom: 3px solid #ffd400;
+  background: linear-gradient(90deg, #160d29, #38205a);
+  border-bottom: 3px solid var(--heading-purple);
 }
 
 nav a {
-  color: #f2f2f2;
+  color: var(--heading-light);
   text-decoration: none;
   font-weight: bold;
 }
 
 nav a:hover {
-  color: #ffd400;
+  color: #c6a6ff;
 }
 
 section {
@@ -31,17 +49,23 @@ section {
 
 h1 {
   font-size: 2.5rem;
-  color: #ffd400;
+  background: linear-gradient(90deg, #c7a5ff, #8f5bd4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-align: center;
   letter-spacing: 2px;
-  text-shadow: 0 0 8px rgba(255, 212, 0, 0.4);
+  text-shadow: 0 0 18px rgba(158, 112, 233, 0.2);
 }
 
 h2 {
   font-size: 1.8rem;
   font-weight: 600;
-  color: #ffd400;
-  border-bottom: 2px solid #4b2e83;
+  background: linear-gradient(90deg, #c7a5ff, #8f5bd4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 2px solid var(--border);
   padding-bottom: 5px;
 }
 
@@ -57,19 +81,19 @@ h2 {
 #experience li {
   display: flex;
   flex-direction: column;
-  background-color: #262626;
-  border-left: 4px solid #ffd400;
+  background-color: var(--surface);
+  border-left: 4px solid var(--heading-purple);
   border-radius: 8px;
   padding: 15px 20px;
   margin-bottom: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 22px rgba(8, 4, 16, 0.25);
 }
 
 .job-header {
   display: flex;
   justify-content: space-between;
   font-weight: bold;
-  color: #ffd400;
+  color: var(--heading-light);
 }
 
 #skills ul {
@@ -81,8 +105,8 @@ h2 {
 }
 
 #skills li {
-  background-color: #262626;
-  border: 2px solid #ffd400;
+  background-color: var(--surface);
+  border: 2px solid var(--border);
   border-radius: 8px;
   padding: 10px 15px;
 }
@@ -96,8 +120,8 @@ h2 {
 }
 
 #projects li {
-  background-color: #262626;
-  border: 2px solid #4b2e83;
+  background-color: var(--surface);
+  border: 2px solid var(--border);
   border-radius: 8px;
   padding: 10px 15px;
 }
@@ -110,13 +134,13 @@ h2 {
 }
 
 #connect a {
-  color: #f2f2f2;
+  color: var(--heading-light);
   text-decoration: none;
   font-weight: bold;
 }
 
 #connect a:hover {
-  color: #ffd400;
+  color: #c6a6ff;
 }
 
 #leave-a-message form {
@@ -128,14 +152,14 @@ h2 {
 
 #leave-a-message label {
   font-weight: bold;
-  color: #f2f2f2;
+  color: var(--heading-light);
 }
 
 #leave-a-message input,
 #leave-a-message textarea {
-  background-color: #262626;
-  color: #f2f2f2;
-  border: 2px solid #ffd400;
+  background-color: var(--surface-dark);
+  color: var(--text);
+  border: 2px solid var(--border);
   border-radius: 8px;
   padding: 10px 12px;
   font-family: inherit;
@@ -149,8 +173,8 @@ h2 {
 
 #leave-a-message button {
   align-self: flex-start;
-  background-color: #ffd400;
-  color: #1a1a1a;
+  background: linear-gradient(90deg, #a975e5, #7041aa);
+  color: #fffaff;
   border: none;
   border-radius: 8px;
   padding: 10px 20px;
@@ -159,8 +183,8 @@ h2 {
 }
 
 #leave-a-message button:hover {
-  background-color: #4b2e83;
-  color: #f2f2f2;
+  background: linear-gradient(90deg, #c097ff, #8b5bc9);
+  color: #fffaff;
 }
 
 #messages ul {
@@ -172,23 +196,23 @@ h2 {
   display: flex;
   align-items: center;
   gap: 12px;
-  background-color: #262626;
-  border-left: 4px solid #ffd400;
+  background-color: var(--surface);
+  border-left: 4px solid var(--heading-purple);
   border-radius: 8px;
   padding: 12px 15px;
   margin-bottom: 10px;
 }
 
 #messages li a {
-  color: #ffd400;
+  color: var(--heading-light);
   font-weight: bold;
   text-decoration: none;
 }
 
 #messages li button {
   margin-left: auto;
-  background-color: #4b2e83;
-  color: #f2f2f2;
+  background-color: #563581;
+  color: #f4edff;
   border: none;
   border-radius: 6px;
   padding: 6px 12px;
@@ -196,8 +220,8 @@ h2 {
 }
 
 #messages li button:hover {
-  background-color: #ffd400;
-  color: #1a1a1a;
+  background-color: var(--heading-purple);
+  color: #170d27;
 }
 
 @media (max-width: 600px) {
