@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore Victor Acuna's GitHub repositories and public activity."
+    />
+    <title>GitHub Activity | Victor Acuna</title>
+    <link rel="stylesheet" href="css/open-api.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <a class="back-link" href="index.html">&larr; Back to portfolio</a>
+      <p class="eyebrow">Open API project</p>
+      <h1>GitHub activity, in motion.</h1>
+      <p class="intro">
+        A small window into the work I build and the code I share. Choose a view
+        below to request that data directly from GitHub.
+      </p>
+    </header>
+
+    <main>
+      <nav class="view-nav" aria-label="GitHub data views">
+        <button
+          class="view-button active"
+          type="button"
+          data-view="repositories"
+        >
+          Repositories
+        </button>
+        <button class="view-button" type="button" data-view="activity">
+          Recent activity
+        </button>
+      </nav>
+
+      <section class="data-panel" aria-live="polite">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow" id="panel-kicker">Public projects</p>
+            <h2 id="panel-title">Repositories</h2>
+          </div>
+          <span class="status" id="status">Ready to explore</span>
+        </div>
+        <p class="panel-description" id="panel-description">
+          Browse the public repositories on Victor's GitHub profile.
+        </p>
+        <div id="results" class="results"></div>
+      </section>
+
+      <p class="source-note">
+        Data source:
+        <a
+          href="https://docs.github.com/en/rest"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub REST API documentation
+        </a>
+      </p>
+    </main>
+
+    <footer>Built with HTML, CSS, JavaScript, and a public API.</footer>
+    <script src="js/open-api.js"></script>
+  </body>
+</html>
