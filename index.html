@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <!-- Nav -->
     <nav>
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
@@ -21,14 +22,34 @@
 
     <h1>Victor Acuna</h1>
 
+    <!-- About -->
     <section id="about">
       <h2>About</h2>
-      <p>
-        I'm a UCLA student studying engineering, currently learning web
-        development through Code the Dream.
-      </p>
+      <img src="images/profile.jpg" alt="Victor Acuna" class="profile-photo" />
+
+      <div class="about-content">
+        <ul class="about-details">
+          <li><span>Location</span>Los Angeles, CA</li>
+          <li><span>Education</span>Computer Science</li>
+          <li><span>Focus</span>Front-End Development</li>
+          <li><span>Interests</span>Gaming, Reading, Tech</li>
+        </ul>
+
+        <div class="about-text">
+          <h3>A little more about me</h3>
+          <p>
+            I'm a Computer Science student who enjoys building websites, solving
+            problems, and learning new technologies. I'm interested in creating
+            clean, useful, and user-friendly experiences on the web. Outside of
+            coding, you can usually find me playing video games, reading, or
+            exploring new tech. I'm always looking to improve, learn, and work
+            on projects that make an impact.
+          </p>
+        </div>
+      </div>
     </section>
 
+    <!-- Experience -->
     <section id="experience">
       <h2>Experience</h2>
 
@@ -110,28 +131,31 @@
       </ul>
     </section>
 
+    <!-- Skills: populated by index.js -->
     <section id="skills">
       <h2>Skills</h2>
       <ul></ul>
     </section>
 
+    <!-- Projects: populated via GitHub API in index.js -->
     <section id="projects">
       <h2>Projects</h2>
       <ul></ul>
     </section>
 
+    <!-- Connect -->
     <section id="connect">
       <h2>Connect</h2>
       <ul>
-        <li>
-          <a href="https://github.com/VictorAcuna04">GitHub</a>
-        </li>
+        <li><a href="mailto:victoracuna89@g.ucla.edu">Email</a></li>
+        <li><a href="https://github.com/VictorAcuna04">GitHub</a></li>
         <li>
           <a href="https://www.linkedin.com/in/victor-acuna/">LinkedIn</a>
         </li>
       </ul>
     </section>
 
+    <!-- Leave a Message: form handled by index.js -->
     <section id="leave-a-message">
       <h2>Leave a Message</h2>
       <form name="leave_message">
@@ -149,6 +173,7 @@
       </form>
     </section>
 
+    <!-- Messages: populated by index.js on form submit -->
     <section id="messages">
       <h2>Messages</h2>
       <ul></ul>

@@ -1,24 +1,16 @@
 :root {
-  --background-deep: #100b1d;
-  --background-purple: #2a1747;
-  --surface: rgba(38, 25, 61, 0.9);
-  --surface-dark: rgba(22, 14, 36, 0.94);
-  --heading-light: #e8ddff;
-  --heading-purple: #9e70e9;
-  --text: #d1cbd9;
-  --muted-text: #aaa2b5;
-  --border: #694b91;
+  --background: #ffffff;
+  --card-bg: #f5f5f7;
+  --border: #e5e5ea;
+  --text-primary: #1d1d1f;
+  --text-secondary: #6e6e73;
+  --accent: #007aff;
 }
 
 body {
-  background: linear-gradient(
-    135deg,
-    var(--background-deep),
-    var(--background-purple)
-  );
-  background-attachment: fixed;
-  color: var(--text);
-  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -28,18 +20,21 @@ nav {
   flex-wrap: wrap;
   gap: 20px;
   padding: 15px 30px;
-  background: linear-gradient(90deg, #160d29, #38205a);
-  border-bottom: 3px solid var(--heading-purple);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
 }
 
 nav a {
-  color: var(--heading-light);
+  color: var(--text-primary);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 nav a:hover {
-  color: #c6a6ff;
+  color: var(--accent);
 }
 
 section {
@@ -49,30 +44,88 @@ section {
 
 h1 {
   font-size: 2.5rem;
-  background: linear-gradient(90deg, #c7a5ff, #8f5bd4);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  color: var(--text-primary);
   text-align: center;
-  letter-spacing: 2px;
-  text-shadow: 0 0 18px rgba(158, 112, 233, 0.2);
+  letter-spacing: -0.02em;
 }
 
 h2 {
   font-size: 1.8rem;
   font-weight: 600;
-  background: linear-gradient(90deg, #c7a5ff, #8f5bd4);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--text-primary);
   border-bottom: 2px solid var(--border);
   padding-bottom: 5px;
 }
 
 #about {
   text-align: center;
+  color: var(--text-secondary);
 }
 
+.profile-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 16px;
+  display: block;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* About: two-column details + bio */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 700px;
+  margin: 20px auto 0;
+  text-align: left;
+}
+
+.about-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1 1 200px;
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  padding: 18px 20px;
+}
+
+.about-details li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+.about-details li:last-child {
+  border-bottom: none;
+}
+
+.about-details li span {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.about-text {
+  flex: 2 1 300px;
+}
+
+.about-text h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.about-text p {
+  color: var(--text-secondary);
+}
+
+/* Experience: flexbox layout */
 #experience ul {
   list-style: none;
   padding: 0;
@@ -81,21 +134,21 @@ h2 {
 #experience li {
   display: flex;
   flex-direction: column;
-  background-color: var(--surface);
-  border-left: 4px solid var(--heading-purple);
-  border-radius: 8px;
+  background-color: var(--card-bg);
+  border-radius: 16px;
   padding: 15px 20px;
   margin-bottom: 15px;
-  box-shadow: 0 8px 22px rgba(8, 4, 16, 0.25);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
 }
 
 .job-header {
   display: flex;
   justify-content: space-between;
-  font-weight: bold;
-  color: var(--heading-light);
+  font-weight: 600;
+  color: var(--text-primary);
 }
 
+/* Skills: flexbox layout */
 #skills ul {
   display: flex;
   flex-wrap: wrap;
@@ -105,12 +158,15 @@ h2 {
 }
 
 #skills li {
-  background-color: var(--surface);
-  border: 2px solid var(--border);
-  border-radius: 8px;
-  padding: 10px 15px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 18px;
+  color: var(--text-secondary);
+  font-weight: 500;
 }
 
+/* Projects: flexbox layout */
 #projects ul {
   display: flex;
   flex-wrap: wrap;
@@ -120,12 +176,13 @@ h2 {
 }
 
 #projects li {
-  background-color: var(--surface);
-  border: 2px solid var(--border);
-  border-radius: 8px;
-  padding: 10px 15px;
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  padding: 14px 18px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
 }
 
+/* Connect: flexbox layout */
 #connect ul {
   display: flex;
   gap: 20px;
@@ -134,15 +191,16 @@ h2 {
 }
 
 #connect a {
-  color: var(--heading-light);
+  color: var(--text-primary);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 #connect a:hover {
-  color: #c6a6ff;
+  color: var(--accent);
 }
 
+/* Leave a Message: form styling */
 #leave-a-message form {
   display: flex;
   flex-direction: column;
@@ -151,17 +209,17 @@ h2 {
 }
 
 #leave-a-message label {
-  font-weight: bold;
-  color: var(--heading-light);
+  font-weight: 600;
+  color: var(--text-primary);
 }
 
 #leave-a-message input,
 #leave-a-message textarea {
-  background-color: var(--surface-dark);
-  color: var(--text);
-  border: 2px solid var(--border);
-  border-radius: 8px;
-  padding: 10px 12px;
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 14px;
   font-family: inherit;
   font-size: 1rem;
 }
@@ -173,20 +231,20 @@ h2 {
 
 #leave-a-message button {
   align-self: flex-start;
-  background: linear-gradient(90deg, #a975e5, #7041aa);
-  color: #fffaff;
+  background: var(--accent);
+  color: #fff;
   border: none;
-  border-radius: 8px;
-  padding: 10px 20px;
-  font-weight: bold;
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-weight: 600;
   cursor: pointer;
 }
 
 #leave-a-message button:hover {
-  background: linear-gradient(90deg, #c097ff, #8b5bc9);
-  color: #fffaff;
+  background: #005ecb;
 }
 
+/* Messages: list of submitted entries */
 #messages ul {
   list-style: none;
   padding: 0;
@@ -196,34 +254,33 @@ h2 {
   display: flex;
   align-items: center;
   gap: 12px;
-  background-color: var(--surface);
-  border-left: 4px solid var(--heading-purple);
-  border-radius: 8px;
-  padding: 12px 15px;
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  padding: 12px 18px;
   margin-bottom: 10px;
 }
 
 #messages li a {
-  color: var(--heading-light);
-  font-weight: bold;
+  color: var(--accent);
+  font-weight: 600;
   text-decoration: none;
 }
 
 #messages li button {
   margin-left: auto;
-  background-color: #563581;
-  color: #f4edff;
+  background-color: #e5e5ea;
+  color: var(--text-primary);
   border: none;
-  border-radius: 6px;
-  padding: 6px 12px;
+  border-radius: 999px;
+  padding: 6px 14px;
   cursor: pointer;
 }
 
 #messages li button:hover {
-  background-color: var(--heading-purple);
-  color: #170d27;
+  background-color: #d1d1d6;
 }
 
+/* Mobile: larger touch targets on the message form */
 @media (max-width: 600px) {
   #leave-a-message input,
   #leave-a-message textarea,
